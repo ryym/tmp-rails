@@ -1,0 +1,19 @@
+version: 2.1
+
+orbs:
+  dscar-brakeman: moneyforward/dscar-brakeman@1.1.0
+
+anchors:
+  dscar-executor-parameters: &dscar-executor-parameters
+    project-git_url: << pipeline.project.git_url >>
+    git-base_revision: << pipeline.git.base_revision >>
+    git-revision: << pipeline.git.revision >>
+
+workflows:
+  analyze-code-statically:
+    jobs:
+      - dscar-brakeman/execute:
+          name: brakeman
+          executor:
+            <<: *dscar-executor-parameters
+            name: dscar-brakeman/default
