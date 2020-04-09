@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   def command_injection2
     system(params[:command])
   end
+
+  def command_injection3
+    system(params[:command])
+  end
 end
