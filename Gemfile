@@ -34,7 +34,7 @@ group :development, :test do
 
   gem 'brakeman'
 
-  gem 'rubocop'
+  gem 'rubocop', '0.79'
 end
 
 group :development do
