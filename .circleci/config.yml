@@ -24,4 +24,4 @@ workflows:
             <<: *dscar-executor-parameters
             name: dscar-rubocop/default
             docker-image: circleci/ruby:2.6.5-node # XXX: necessary?
-          parallelism: 3
+          # parallelism: 3
