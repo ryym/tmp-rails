@@ -30,8 +30,9 @@ Bundler/OrderedGems:
 # Configuration parameters: EnforcedStyle, IndentationWidth.
 # SupportedStyles: with_first_argument, with_fixed_indentation
 Layout/ArgumentAlignment:
+  Severity: refactor
   Exclude:
-    - 'bin/webpack'
+    # - 'bin/webpack'
     - 'bin/webpack-dev-server'
 
 # Offense count: 6
@@ -47,7 +48,7 @@ Layout/EmptyLineAfterGuardClause:
 # SupportedStylesForEmptyBrackets: space, no_space
 Layout/SpaceInsideArrayLiteralBrackets:
   Exclude:
-    - 'config/environments/production.rb'
+    # - 'config/environments/production.rb'
 
 # Offense count: 1
 # Configuration parameters: IgnoredMethods.
