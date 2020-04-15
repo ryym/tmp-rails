@@ -35,6 +35,7 @@ group :development, :test do
   gem 'brakeman'
 
   gem 'rubocop', '0.79'
+  gem 'rubocop-rails', '2.5.1'
 end
 
 group :development do
