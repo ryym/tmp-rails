@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   dscar-brakeman: moneyforward/dscar-brakeman@1.1.0
+  dscar-rubocop: moneyforward/dscar-rubocop@1.2.0
 
 anchors:
   dscar-executor-parameters: &dscar-executor-parameters
@@ -17,3 +18,10 @@ workflows:
           executor:
             <<: *dscar-executor-parameters
             name: dscar-brakeman/default
+      - dscar-rubocop/execute:
+          name: rubocop
+          executor:
+            <<: *dscar-executor-parameters
+            name: dscar-rubocop/default
+            docker-image: circleci/ruby:2.6.5-node # XXX: necessary?
+          parallelism: 3
