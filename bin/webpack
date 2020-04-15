@@ -7,8 +7,7 @@ require "pathname"
 ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../../Gemfile",
   Pathname.new(__FILE__).realpath)
 
-p [1,
-  2]
+# p [1, 2]
 
 require "bundler/setup"
 
