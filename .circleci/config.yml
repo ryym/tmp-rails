@@ -19,6 +19,7 @@ workflows:
             <<: *dscar-executor-parameters
             name: dscar-brakeman/default
             docker-image: circleci/ruby:2.6.5-node
+            hoge: true
 
       - dscar-rubocop/execute:
           name: rubocop
